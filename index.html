@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Bangladesh</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS and DaisyUI links -->
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#B4f461',
+            secondary: '#111111',
+            couponOne: '#f78c9c',
+            bghead: '#F0E9DA',
+          },
+          boxShadow: {
+            custom: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+          },
+          fontFamily: {
+            reddit: ['"Reddit Sans Condensed"', 'system-ui'],
+          },
+        },
+      },
+    };
+  </script>
+
+</head>
+
+<body class="font-reddit">
+
+  <header class="max-w-screen-xl container mx-auto sticky top-0 z-10 ">
+    <div class="flex justify-between items-center py-8 px-10 bg-yellow-50">
+      <!-- Blog Button -->
+      <div>
+        <a href="home.html" class="bg-primary py-4 px-8 text-secondary text-xl font-semibold rounded-2xl">Blog</a>
+      </div>
+
+      <!-- Title -->
+      <div class="flex justify-center text-center items-center gap-4">
+        <img src="assets/logo.png" alt="Logo" class="h-10">
+        <!-- <h2 class="md:text-2xl font-bold text-secondary">Donate Bangladesh</h2> -->
+        <h2 class="hidden sm:block text-2xl font-bold text-secondary">Donate Bangladesh</h2>
+
+      </div>
+
+      <!-- Donation Counter -->
+      <div>
+        <button class="bg-white text-xl font-semibold text-secondary flex items-center py-4 px-6 shadow-md">
+          <img src="assets/coin.png" alt="Coin" class="mr-1">
+          <span id="total-amount" class="mr-1">5000</span>
+          BDT
+        </button>
+      </div>
+    </div>
+
+    <!-- Donation and History button -->
+    <div class="flex justify-center items-center gap-10 my-12">
+      <!-- Donation -->
+      <button class="bg-primary text-xl py-2 px-4 font-semibold text-secondary rounded-md">Donation</button>
+
+      <!-- History -->
+      <button class="bg-white text-xl font-semibold py-2 px-4 shadow-2xl rounded-md text-secondary">History</button>
+    </div>
+  </header>
+
+  <!-- main part start -->
+  <main class="max-w-screen-xl container mx-auto px-10">
+    <!-- donate noakhali -->
+
+    <section class="w-full flex flex-col md:flex-row justify-between text-start p-8 px-6 shadow-custom rounded-md">
+      <div class="w-full md:w-1/2">
+        <img src="assets/noakhali.png" alt="" class="w-full h-auto rounded-lg">
+      </div>
+
+      <!-- Donate Noakhali content -->
+      <div class="w-full md:w-1/2 md:pl-6">
+        <button class="btn bg-white text-xl font-semibold text-secondary py-3 px-4 flex items-center">
+          <img src="assets/coin.png" alt="Coin" class="mr-2">
+          <span id="noakhali-amount">10000</span> BDT
+        </button>
+        <h2 class="text-2xl font-bold text-secondary py-4">Donate for Flood at Noakhali, Bangladesh</h2>
+
+        <p class="text-xl font-normal text-secondary py-2">The recent floods in Noakhali have caused significant
+          damage
+          to homes and infrastructure. Your donation will help
+          provide essential supplies to those affected by this disaster. Every contribution, big or small, makes a
+          difference.
+          Please
+          join us in supporting the relief efforts and making a positive impact on the lives of those in need.
+        </p>
+
+        <input id="noakhali-donate" type="number" class="w-full p-4 my-4 shadow-custom rounded-md"
+          placeholder="Write Donation Amount">
+        <p id="income-error" class="text-red-500 text-xs mt-1 hidden">
+          ⚠️ Invalid !
+        </p>
+        <br>
+        <button id="noakhali-btn"
+          class="bg-primary w-full py-4 text-secondary text-xl font-semibold rounded-md mt-4">Donate Now</button>
+      </div>
+    </section>
+
+    <!-- Donate feni content -->
+    <section
+      class="w-full flex flex-col md:flex-row justify-between text-start my-8 py-4 px-6 shadow-custom rounded-md">
+      <div class="w-full md:w-1/2">
+        <img src="assets/feni.png" alt="" class="w-full h-auto rounded-lg">
+      </div>
+
+      <!-- Donate feni content -->
+      <div class="w-full md:w-1/2 md:pl-6">
+        <button class="btn bg-white text-xl font-semibold text-secondary py-3 px-4 flex items-center">
+          <img src="assets/coin.png" alt="Coin" class="mr-2">
+          <span>100</span> BDT
+        </button>
+        <h2 class="text-2xl font-bold text-secondary py-4">Donate for Flood Relief in Feni,Bangladesh</h2>
+
+        <p class="text-xl font-normal text-secondary py-2">The recent floods in Feni have devastated local communities,
+          leading to severe disruption and loss. Your generous
+          donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected
+          by this
+          calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster.
+          Every
+          contribution counts towards making a real difference. Please consider donating today to assist those in urgent
+          need.
+        </p>
+
+        <input type="number" class="w-full p-4 my-4 shadow-custom rounded-md" placeholder="Write Donation Amount"> <br>
+        <button class="bg-primary w-full py-4 text-secondary text-xl font-semibold rounded-md mt-4">Donate Now</button>
+      </div>
+    </section>
+
+    <!-- Quota Movement -->
+    <section class="w-full flex flex-col md:flex-row justify-between text-start py-8 px-6 shadow-custom my-4">
+      <div class="w-full md:w-1/2">
+        <img src="assets/quota-protest.png" alt="" class="w-full h-auto rounded-lg">
+      </div>
+
+      <!-- Quota Movement content -->
+      <div class="w-full md:w-1/2 md:pl-6">
+        <button class="btn bg-white text-xl font-semibold text-secondary py-3 px-4 flex items-center">
+          <img src="assets/coin.png" alt="Coin" class="mr-2">
+          <span>100</span> BDT
+        </button>
+        <h2 class="text-2xl font-bold text-secondary py-4">Aid for Injured in the Quota Movement</h2>
+
+        <p class="text-xl font-normal text-secondary py-2">The recent floods in Feni have devastated local communities,
+          leading to severe disruption and loss. Your generous
+          donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected
+          by this
+          calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster.
+          Every
+          contribution counts towards making a real difference. Please consider donating today to assist those in urgent
+          need.
+        </p>
+
+        <input type="number" class="w-full p-4 my-4 shadow-custom rounded-md" placeholder="Write Donation Amount"> <br>
+        <button class="bg-primary w-full py-4 text-secondary text-xl font-semibold mt-4 rounded-md">Donate Now</button>
+      </div>
+    </section>
+
+
+    <dialog id="my_modal_1" class="modal  rounded-lg shadow-lg p-6 w-11/12 max-w-md mx-auto">
+      <form method="dialog" class="modal-box px-5 flex flex-col justify-center items-center space-y-5">
+        <!-- Icon -->
+        <img src="assets/coin.png" alt="">
+
+        <!-- Heading -->
+        <h3 class="font-bold text-2xl text-green-500 my-2">Congratulations!</h3>
+
+        <!-- Message Content -->
+        <div class="text-center space-y-3">
+          <p class="font-bold">You HAVE donated for Humankind</p>
+          <h3>Susscessfully</h3>
+        </div>
+
+        <!-- Continue Button -->
+        <button id="btn-continue" class="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-md">
+          close confirmation
+        </button>
+      </form>
+    </dialog>
+
+  </main>
+  <script src="index.js"></scripts>
+</body>
+
+</html>

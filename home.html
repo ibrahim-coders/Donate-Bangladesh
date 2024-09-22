@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Bangladesh</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans+Condensed:wght@200..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CSS and DaisyUI links -->
+
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#B4f461',
+            secondary: '#111111',
+            couponOne: '#f78c9c',
+            bghead: '#F0E9DA',
+          },
+          boxShadow: {
+            custom: 'rgba(99, 99, 99, 0.2) 0px 2px 8px 0px',
+          },
+          fontFamily: {
+            reddit: ['"Reddit Sans Condensed"', 'system-ui'],
+          },
+        },
+      },
+    };
+  </script>
+
+</head>
+
+<body class="font-reddit">
+  <header class="max-w-screen-xl container mx-auto sticky top-0 z-10 ">
+    <div class="px-4 sm:px-10 sm:flex justify-between items-center py-8 bg-yellow-50">
+      <!-- Blog Button -->
+      <div>
+        <a href="index.html" class="bg-primary py-4 px-8 text-secondary text-xl font-semibold rounded-2xl">Home</a>
+      </div>
+
+      <!-- Title -->
+      <div class="flex justify-center text-center items-center gap-4">
+        <img src="assets/logo.png" alt="Logo" class="h-10">
+        <!-- <h2 class="md:text-2xl font-bold text-secondary">Donate Bangladesh</h2> -->
+        <h2 class="hidden sm:block text-2xl font-bold text-secondary">Donate Bangladesh</h2>
+
+      </div>
+
+      <!-- Donation Counter -->
+      <div>
+        <button class="bg-white text-xl font-semibold text-secondary flex items-center py-4 px-6 shadow-custom">
+          <img src="assets/coin.png" alt="Coin" class="mr-1">
+          <span class="mr-1">5000</span>
+          BDT
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="px-10 sm:max-w-screen-xl container mx-auto mt-10">
+
+    <h2 class="text-3xl font-bold text-secondary my-10">Importan FAQ ?</h2>
+
+    <div class="collapse collapse-arrow bg-white py-4 shadow-custom my-2">
+      <input type="radio" name="my-accordion-2" checked="checked" />
+      <div class="collapse-title text-xl font-bold  ">What is the Document Object Model (DOM)?</div>
+      <div class="collapse-content">
+        <p class="text-xl font-normal text-secondary ">The Document Object Model (DOM) is a programming interface
+          for web documents that represents the structure of a document
+          as a tree of objects. Each element, attribute, and piece of text in the document is a node in this tree,
+          allowing
+          developers to manipulate the content and structure using languages like JavaScript. The DOM enables dynamic
+          changes to
+          the webpage in response to user interactions.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-arrow bg-white py-4 shadow-custom my-2 ">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-bold">How do you select an element from the DOM?</div>
+      <div class="collapse-content ">
+        <p class="text-xl font-normal text-secondary py-2">To select an element from the DOM, you can use various
+          methods provided by JavaScript. Commonly used methods include
+          document.getElementById() for selecting by ID, document.getElementsByClassName() for class names, and
+          document.querySelector() for selecting using CSS selectors. These methods allow you to access and manipulate
+          HTML
+          elements dynamically.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-arrow bg-white py-4 shadow-custom my-2">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-bold">What is event delegation in the context of the DOM, and why is it
+        useful?</div>
+      <div class="collapse-content">
+        <p class="text-xl font-normal text-secondary py-2">Event delegation is a technique in the DOM where a single
+          event listener is added to a parent element instead of
+          individual listeners on multiple child elements. When an event occurs on a child, it bubbles up to the parent,
+          which can
+          handle the event. This approach is useful because it reduces memory usage, simplifies code management, and
+          allows
+          dynamically added elements to inherit the event listener without requiring additional code. It enhances
+          performance and
+          maintainability in applications with many interactive elements.</p>
+      </div>
+    </div>
+
+    <div class="collapse collapse-arrow bg-white py-4 shadow-custom my-2">
+      <input type="radio" name="my-accordion-2" />
+      <div class="collapse-title text-xl font-bold">How do you manipulate an element's attributes and styles using the
+        DOM?</div>
+      <div class="collapse-content">
+        <p class="text-xl font-normal text-secondary py-2">To manipulate an element's attributes and styles using the
+          DOM, you can use JavaScript methods and properties:
+
+          Attributes:
+
+          Use element.getAttribute('attributeName') to retrieve an attribute's value.
+          Use element.setAttribute('attributeName', 'value') to change or add an attribute.
+          You can also directly access properties like element.src, element.href, etc., for common attributes.
+          Styles:
+
+          Use element.style.propertyName to change individual CSS properties (e.g., element.style.color = 'red';).
+          To set multiple styles, you can use element.style.cssText = 'property1: value; property2: value;'.
+          For class manipulation, use element.classList.add('className'), element.classList.remove('className'), or
+          element.classList.toggle('className').
+          These methods allow you to dynamically adjust an element's behavior and appearance in response to user
+          interactions or
+          other events.</p>
+      </div>
+    </div>
+
+
+  </section>
+</body>
+
+</html>
