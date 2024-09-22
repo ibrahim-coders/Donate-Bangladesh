@@ -42,8 +42,8 @@
 
 <body class="font-reddit">
 
-  <header class="max-w-screen-xl container mx-auto sticky top-0 z-10 ">
-    <div class="flex justify-between items-center py-8 px-10 bg-yellow-50">
+  <header class="max-w-screen-xl container mx-auto sticky top-0 z-10 shadow-custom rounded-md bg-slate-50 pb-4">
+    <div class="w-full flex justify-between items-center py-8 px-10 bg-yellow-50">
       <!-- Blog Button -->
       <div>
         <a href="home.html" class="bg-primary py-4 px-8 text-secondary text-xl font-semibold rounded-2xl">Blog</a>
@@ -58,7 +58,7 @@
       </div>
 
       <!-- Donation Counter -->
-      <div>
+      <div class="">
         <button class="bg-white text-xl font-semibold text-secondary flex items-center py-4 px-6 shadow-md">
           <img src="assets/coin.png" alt="Coin" class="mr-1">
           <span id="total-amount" class="mr-1">5000</span>
@@ -70,18 +70,19 @@
     <!-- Donation and History button -->
     <div class="flex justify-center items-center gap-10 my-12">
       <!-- Donation -->
-      <button class="bg-primary text-xl py-2 px-4 font-semibold text-secondary rounded-md">Donation</button>
+      <button id="donation"
+        class="bg-primary text-xl py-2 px-4 font-semibold text-secondary rounded-md">Donation</button>
 
       <!-- History -->
-      <button class="bg-white text-xl font-semibold py-2 px-4 shadow-2xl rounded-md text-secondary">History</button>
+      <button id="history" class="text-xl font-semibold py-2 px-4 shadow-2xl rounded-md text-secondary">History</button>
     </div>
   </header>
 
   <!-- main part start -->
-  <main class="max-w-screen-xl container mx-auto px-10">
+  <main id="main" class="max-w-screen-xl container mx-auto px-10">
     <!-- donate noakhali -->
 
-    <section class="w-full flex flex-col md:flex-row justify-between text-start p-8 px-6 shadow-custom rounded-md">
+    <section class="w-full flex flex-col md:flex-row justify-between text-start p-8 px-6 shadow-custom rounded-md mt-8">
       <div class="w-full md:w-1/2">
         <img src="assets/noakhali.png" alt="" class="w-full h-auto rounded-lg">
       </div>
@@ -125,7 +126,7 @@
       <div class="w-full md:w-1/2 md:pl-6">
         <button class="btn bg-white text-xl font-semibold text-secondary py-3 px-4 flex items-center">
           <img src="assets/coin.png" alt="Coin" class="mr-2">
-          <span>100</span> BDT
+          <span id="feni-amount">100</span> BDT
         </button>
         <h2 class="text-2xl font-bold text-secondary py-4">Donate for Flood Relief in Feni,Bangladesh</h2>
 
@@ -139,8 +140,10 @@
           need.
         </p>
 
-        <input type="number" class="w-full p-4 my-4 shadow-custom rounded-md" placeholder="Write Donation Amount"> <br>
-        <button class="bg-primary w-full py-4 text-secondary text-xl font-semibold rounded-md mt-4">Donate Now</button>
+        <input id="feni-donate" type="number" class="w-full p-4 my-4 shadow-custom rounded-md"
+          placeholder="Write Donation Amount"> <br>
+        <button id="feni-btn" class="bg-primary w-full py-4 text-secondary text-xl font-semibold rounded-md mt-4">Donate
+          Now</button>
       </div>
     </section>
 
@@ -154,7 +157,7 @@
       <div class="w-full md:w-1/2 md:pl-6">
         <button class="btn bg-white text-xl font-semibold text-secondary py-3 px-4 flex items-center">
           <img src="assets/coin.png" alt="Coin" class="mr-2">
-          <span>100</span> BDT
+          <span id="students-injured-amount">100</span> BDT
         </button>
         <h2 class="text-2xl font-bold text-secondary py-4">Aid for Injured in the Quota Movement</h2>
 
@@ -168,8 +171,10 @@
           need.
         </p>
 
-        <input type="number" class="w-full p-4 my-4 shadow-custom rounded-md" placeholder="Write Donation Amount"> <br>
-        <button class="bg-primary w-full py-4 text-secondary text-xl font-semibold mt-4 rounded-md">Donate Now</button>
+        <input id="students-injured-donate" type="number" class="w-full p-4 my-4 shadow-custom rounded-md"
+          placeholder="Write Donation Amount"> <br>
+        <button id="students-injured-btn"
+          class="bg-primary w-full py-4 text-secondary text-xl font-semibold mt-4 rounded-md">Donate Now</button>
       </div>
     </section>
 
@@ -195,8 +200,14 @@
       </form>
     </dialog>
 
+
+
+
   </main>
-  <script src="index.js"></scripts>
+
+  <h2 id="history-content" class="hidden text-2xl font-bold text-secondary py-4">Aid for Injured in the Quota Movement
+  </h2>
+  <script src="index.js"></script>
 </body>
 
 </html>
