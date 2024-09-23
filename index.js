@@ -181,7 +181,7 @@ document
     const historyContent = document.getElementById('history-content');
     const historyDiv = document.createElement('div');
 
-    historyDiv.className = 'w-full p-4 rounded-md shadow-custom my-4 px-10';
+    historyDiv.className = 'w-full p-4 rounded-md shadow-custom my-4  px-10';
 
     historyDiv.innerHTML = `
  
