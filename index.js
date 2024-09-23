@@ -2,6 +2,23 @@ function totalAmount(amount) {
   return parseFloat(document.getElementById(amount).innerText);
 }
 
+//  ⚠️nokhali value Invalid error
+document
+  .getElementById('noakhali-donate')
+  .addEventListener('input', function () {
+    const input = parseFloat(document.getElementById('noakhali-donate').value);
+
+    if (input <= 0 || isNaN(input)) {
+      document.getElementById('noakhali-Invalid').classList.remove('hidden');
+      document.getElementById('noakhali-btn').classList.add('hidden');
+    } else {
+      document.getElementById('noakhali-Invalid').classList.add('hidden');
+      document.getElementById('noakhali-btn').classList.remove('hidden');
+    }
+  });
+
+// nokhali donatin
+
 document.getElementById('noakhali-btn').addEventListener('click', function () {
   const noakhaliDonate = parseFloat(
     document.getElementById('noakhali-donate').value
@@ -22,13 +39,6 @@ document.getElementById('noakhali-btn').addEventListener('click', function () {
     return;
   }
 
-  //  ⚠️ Invalid error
-  if (noakhaliDonate <= 0 || isNaN(noakhaliDonate)) {
-    document.getElementById('history-content').classList.remove('hidden');
-    document.getElementById('noakhali-Invalid').classList.remove('hidden');
-    return;
-  }
-
   const noakhaliTotalAmount = noakhaliAmount + noakhaliDonate;
   document.getElementById('noakhali-amount').innerText =
     noakhaliTotalAmount.toFixed(2);
@@ -44,21 +54,29 @@ document.getElementById('noakhali-btn').addEventListener('click', function () {
   const historyContent = document.getElementById('history-content');
   const historyDiv = document.createElement('div');
 
-  historyDiv.className = 'w-full p-4 rounded-md shadow-custom my-4';
-
-  const bangladeshTime = new Date().toLocaleString('en-US', {
-    timeZone: 'Asia/Dhaka',
-  });
-  const timeZoneInfo = ' GMT +0600 (Bangladesh Standard Time)';
+  historyDiv.className = 'w-full p-4 rounded-md shadow-custom my-4 px-10';
 
   historyDiv.innerHTML = `
     <h2 class="text-2xl font-bold text-secondary py-4">
       ${noakhaliDonate} Taka is Donated for famine-2024 at Noakhali, Bangladesh
     </h2>
-    <p class="text-sm font-semibold text-secondary py-2">Date: ${bangladeshTime}${timeZoneInfo}</p>
+    <p class="text-sm font-semibold text-secondary py-2">Date: ${new Date()}</p>
     `;
 
   historyContent.appendChild(historyDiv);
+});
+
+//  ⚠️feni value Invalid error
+document.getElementById('feni-donate').addEventListener('keyup', function () {
+  const feniInput = parseFloat(document.getElementById('feni-donate').value);
+
+  if (feniInput <= 0 || isNaN(feniInput)) {
+    document.getElementById('feni-Invalid').classList.remove('hidden');
+    document.getElementById('feni-btn').classList.add('hidden');
+  } else {
+    document.getElementById('feni-Invalid').classList.add('hidden');
+    document.getElementById('feni-btn').classList.remove('hidden');
+  }
 });
 
 // -- Donate feni -->
@@ -78,13 +96,6 @@ document.getElementById('feni-btn').addEventListener('click', function () {
     return;
   }
 
-  //  ⚠️ Invalid error
-  if (feniDonate <= 0 || isNaN(feniDonate)) {
-    document.getElementById('history-content').classList.remove('hidden');
-    document.getElementById('feni-Invalid').classList.remove('hidden');
-    return;
-  }
-
   const feniTotalAmount = feniAmount + feniDonate;
   document.getElementById('feni-amount').innerText = feniTotalAmount.toFixed(2);
 
@@ -101,22 +112,36 @@ document.getElementById('feni-btn').addEventListener('click', function () {
   const historyContent = document.getElementById('history-content');
   const historyDiv = document.createElement('div');
 
-  historyDiv.className = 'w-full p-4 rounded-md shadow-custom my-4';
-
-  const bangladeshTime = new Date().toLocaleString('en-US', {
-    timeZone: 'Asia/Dhaka',
-  });
-  const timeZoneInfo = ' GMT +0600 (Bangladesh Standard Time)';
+  historyDiv.className = 'w-full p-4 rounded-md shadow-custom my-4 px-10';
 
   historyDiv.innerHTML = `
   <h2 class="text-2xl font-bold text-secondary py-4">
     ${feniDonate} Taka is Donated for famine-2024 at Feni, Bangladesh
   </h2>
-  <p class="text-sm font-semibold text-secondary py-2">Date: ${bangladeshTime}${timeZoneInfo}</p>
+  <p class="text-sm font-semibold text-secondary py-2">Date: ${new Date()}</p>
 `;
 
   historyContent.appendChild(historyDiv);
 });
+
+// /  ⚠️feni value Invalid error
+document
+  .getElementById('students-injured-donate')
+  .addEventListener('keyup', function () {
+    const studentsInput = parseFloat(
+      document.getElementById('students-injured-donate').value
+    );
+
+    if (studentsInput <= 0 || isNaN(studentsInput)) {
+      document.getElementById('injured-Invalid').classList.remove('hidden');
+      document.getElementById('students-injured-btn').classList.add('hidden');
+    } else {
+      document.getElementById('injured-Invalid').classList.add('hidden');
+      document
+        .getElementById('students-injured-btn')
+        .classList.remove('hidden');
+    }
+  });
 
 // Quota Movement
 document
@@ -138,12 +163,6 @@ document
       return;
     }
 
-    //  ⚠️ Invalid error
-    if (studentsInjuredDonate <= 0 || isNaN(studentsInjuredDonate)) {
-      document.getElementById('history-content').classList.remove('hidden');
-      document.getElementById('injured-Invalid').classList.remove('hidden');
-      return;
-    }
     const studentsTotalAmount = studentsInjuredAmount + studentsInjuredDonate;
 
     document.getElementById('students-injured-amount').innerText =
@@ -162,19 +181,14 @@ document
     const historyContent = document.getElementById('history-content');
     const historyDiv = document.createElement('div');
 
-    historyDiv.className = 'w-full p-4 rounded-md shadow-custom my-4';
-
-    const bangladeshTime = new Date().toLocaleString('en-US', {
-      timeZone: 'Asia/Dhaka',
-    });
-    const timeZoneInfo = ' GMT +0600 (Bangladesh Standard Time)';
+    historyDiv.className = 'w-full p-4 rounded-md shadow-custom my-4 px-10';
 
     historyDiv.innerHTML = `
  
   <h2 class="text-2xl font-bold text-secondary py-4">
     ${studentsInjuredDonate} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh
   </h2>
-  <p class="text-sm font-semibold text-secondary py-2">Date: ${bangladeshTime}${timeZoneInfo}</p>
+  <p class="text-sm font-semibold text-secondary py-2">Date: ${new Date()}</p>
   `;
 
     historyContent.appendChild(historyDiv);
@@ -187,9 +201,8 @@ const donation = document.getElementById('donation');
 // history button
 history.addEventListener('click', function () {
   history.classList.add('bg-primary');
-
   donation.classList.remove('bg-primary');
-  document.getElementById('main').classList.add('hidden');
+  document.getElementById('donation-tab').classList.add('hidden');
   document.getElementById('history-content').classList.remove('hidden');
 });
 
@@ -197,6 +210,6 @@ history.addEventListener('click', function () {
 donation.addEventListener('click', function () {
   donation.classList.add('bg-primary');
   history.classList.remove('bg-primary');
-  document.getElementById('main').classList.remove('hidden');
+  document.getElementById('donation-tab').classList.remove('hidden');
   document.getElementById('history-content').classList.add('hidden');
 });

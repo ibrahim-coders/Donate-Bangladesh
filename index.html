@@ -52,7 +52,7 @@
       <!-- Title -->
       <div class="flex justify-center text-center items-center gap-4">
         <img src="assets/logo.png" alt="Logo" class="h-10">
-    
+
         <h2 class="hidden sm:block text-2xl font-bold text-secondary">Donate Bangladesh</h2>
 
       </div>
@@ -89,13 +89,14 @@
   <main id="main" class="max-w-screen-xl container mx-auto p">
     <!-- donate noakhali -->
 
-    <section
+ <section id="donation-tab">
+    <div
       class="w-full md:flex flex-col items-center text-center lg:flex-row justify-between text-start p-8 px-6 shadow-custom rounded-md mt-8">
-
+    
       <div class="w-full  h-full">
         <img src="assets/noakhali.png" alt="" class="w-full h-auto rounded-lg">
       </div>
-
+    
       <!-- Donate Noakhali content -->
       <div class="w-full  md:pl-8">
         <button class="btn bg-white text-xl font-semibold text-secondary py-3 px-4 flex items-center mt-4">
@@ -103,7 +104,7 @@
           <span id="noakhali-amount">10000</span> BDT
         </button>
         <h2 class="text-2xl font-bold text-secondary py-4">Donate for Flood at Noakhali, Bangladesh</h2>
-
+    
         <p class="text-xl font-normal text-secondary py-2">The recent floods in Noakhali have caused significant
           damage
           to homes and infrastructure. Your donation will help
@@ -112,7 +113,7 @@
           Please
           join us in supporting the relief efforts and making a positive impact on the lives of those in need.
         </p>
-
+    
         <input id="noakhali-donate" type="number" class="w-full p-4 my-4 shadow-custom rounded-md"
           placeholder="Write Donation Amount">
         <p id="noakhali-Invalid" class="text-red-500 text-sm mt-1 hidden">
@@ -122,15 +123,15 @@
         <button id="noakhali-btn"
           class="bg-primary w-full py-4 text-secondary text-xl font-semibold rounded-md mt-4 ">Donate Now</button>
       </div>
-    </section>
-
+    </div>
+    
     <!-- Donate feni content -->
-    <section
+    <div
       class="w-full md:flex flex-col items-center text-center lg:flex-row justify-between text-start p-8 px-6 shadow-custom rounded-md mt-8">
       <div class="w-full h-full">
         <img src="assets/feni.png" alt="" class="w-full h-auto rounded-lg">
       </div>
-
+    
       <!-- Donate feni content -->
       <div class="w-full md:ml-8">
         <button class="btn bg-white text-xl font-semibold text-secondary py-3 px-4 flex items-center mt-4">
@@ -138,7 +139,7 @@
           <span id="feni-amount">100</span> BDT
         </button>
         <h2 class="text-2xl font-bold text-secondary py-4">Donate for Flood Relief in Feni,Bangladesh</h2>
-
+    
         <p class="text-xl font-normal text-secondary py-2">The recent floods in Feni have devastated local communities,
           leading to severe disruption and loss. Your generous
           donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected
@@ -148,24 +149,24 @@
           contribution counts towards making a real difference. Please consider donating today to assist those in urgent
           need.
         </p>
-
+    
         <input id="feni-donate" type="number" class="w-full p-4 my-4 shadow-custom rounded-md"
           placeholder="Write Donation Amount"> <br>
-
+    
         <p id="feni-Invalid" class="text-red-500 text-sm mt-1 hidden">⚠️ Invalid amount!</p>
-
+    
         <button id="feni-btn" class="bg-primary w-full py-4 text-secondary text-xl font-semibold rounded-md mt-4">Donate
           Now</button>
       </div>
-    </section>
-
+    </div>
+    
     <!-- Quota Movement -->
-    <section
+    <div
       class="w-full md:flex flex-col items-center text-center lg:flex-row justify-between text-start p-8 px-6 shadow-custom rounded-md my-8">
       <div class="w-full h-full">
         <img src="assets/quota-protest.png" alt="" class="w-full h-auto rounded-lg">
       </div>
-
+    
       <!-- Quota Movement content -->
       <div class="w-full md:ml-8">
         <button class="btn bg-white text-xl font-semibold text-secondary py-3 px-4 flex items-center mt-4">
@@ -173,7 +174,7 @@
           <span id="students-injured-amount">100</span> BDT
         </button>
         <h2 class="text-2xl font-bold text-secondary py-4">Aid for Injured in the Quota Movement</h2>
-
+    
         <p class="text-xl font-normal text-secondary py-2">The recent Quota movement has resulted in numerous injuries
           and significant hardship for many individuals. Your support
           is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By
@@ -184,24 +185,26 @@
           making a
           donation to support these brave individuals in their time of need.
         </p>
-
+    
         <input id="students-injured-donate" type="number" class="w-full p-4 my-4 shadow-custom rounded-md"
           placeholder="Write Donation Amount"> <br>
-
+    
         <p id="injured-Invalid" class="text-red-500 text-sm mt-1 hidden">⚠️ Invalid amount!</p>
-
+    
         <button id="students-injured-btn"
           class="bg-primary w-full py-4 text-secondary text-xl font-semibold mt-4 rounded-md ">Donate Now</button>
       </div>
-    </section>
-  </main>
+    </div>
+
+ </section>
+
 
   <!-- History part-->
-  <section id="history-content" class=" hidden max-w-screen-xl container mx-auto my-10 ">
-
-
+  
+  <section  id="history-content" class=" hidden max-w-screen-xl container mx-auto my-10 ">
+  
   </section>
-
+  </main>
 
 
 
@@ -210,7 +213,7 @@
   <dialog id="my_modal_1" class="modal  rounded-lg shadow-lg p-6 w-11/12 max-w-md mx-auto">
     <form method="dialog" class="modal-box px-5 flex flex-col justify-center items-center space-y-5">
       <!-- Heading -->
-      <h3 class="font-bold text-2xl text-primary my-2">Congratulations!</h3>
+      <h3  class="font-bold text-2xl text-primary my-2" >Congratulations!</h3>
 
       <!-- Icon -->
       <img src="assets/coin.png" alt="">
@@ -221,7 +224,8 @@
       </div>
 
       <!-- Continue Button -->
-      <button id="btn-continue" class="bg-primary hover:bg-cyan-500 hover:text-white text-gray-800 font-bold py-2 px-6 rounded-md">
+      <button id="btn-continue"
+        class="bg-primary hover:bg-cyan-500 hover:text-white text-gray-800 font-bold py-2 px-6 rounded-md">
         close confirmation
       </button>
     </form>
