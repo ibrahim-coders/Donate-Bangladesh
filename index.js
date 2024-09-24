@@ -27,7 +27,6 @@ document.getElementById('noakhali-btn').addEventListener('click', function () {
   // Clear input field
   document.getElementById('noakhali-donate').value = '';
 
-  // Get current amount and calculate new total
   const noakhaliAmount = parseFloat(
     document.getElementById('noakhali-amount').innerText
   );
@@ -213,3 +212,8 @@ donation.addEventListener('click', function () {
   document.getElementById('donation-tab').classList.remove('hidden');
   document.getElementById('history-content').classList.add('hidden');
 });
+
+// const valuesb = document.getElementById('noakhali-donate').value;
+// if (valuesb !== Number) {
+//   document.getElementById('noakhali-btn').classList.add('hidden');
+// }
